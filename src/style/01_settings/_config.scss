@@ -1,0 +1,41 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;700&display=swap&&family=Playfair+Display:wght@800&display=swap');
+
+// Colors
+$black: #2f2f2f;
+$yellow: #fbd46d;
+$gray: #f8f8f8;
+$success: #1cc691;
+$fail: #ce3d3d;
+
+$animation: cubic-bezier(0.23, 1, 0.32, 1);
+
+// Fonts
+$font-main: 'Libre Franklin', sans-serif;
+$font-headings: serif;
+
+// Breakpoints
+$breakpoints: (
+	tab-down: 767px,
+	tab: 768px,
+	desk-down: 1023px,
+	desk: 1024px,
+) !default;
+
+$mobile_max: 375;
+$desk_max: 1440;
+
+.container-fluid {
+	width: 90%;
+	color: $black;
+}
+
+body {
+	background-color: white;
+	overflow: hidden;
+}
+
+#iubenda-cs-banner .iubenda-cs-opt-group button.iubenda-cs-btn-primary {
+	background-color: $yellow !important;
+	color: #fff !important;
+}

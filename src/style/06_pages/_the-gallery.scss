@@ -1,0 +1,238 @@
+div[data-router-view='the_gallery_page'] #scrollbar main {
+	@media (max-width: 576px) {
+		padding-top: 50px;
+	}
+}
+
+.c-hero-the-gallery {
+	height: 65vh;
+	padding-top: 100px;
+	background-color: $gray;
+	background-size: cover;
+	background-position: 50% 100%;
+	position: relative;
+}
+
+.c-hero-the-gallery:after {
+	content: '';
+	display: block;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background-color: black;
+	opacity: 0.2;
+	z-index: 2;
+}
+
+.c-hero-the-gallery__title {
+	font-size: vwd(110);
+	mix-blend-mode: overlay;
+	letter-spacing: vwd(6);
+	z-index: 5;
+	width: 100%;
+	text-align: center;
+	font-family: 'Playfair Display', serif;
+	font-weight: 800;
+	text-transform: uppercase;
+	font-style: normal;
+	color: white;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translateX(-50%) translateY(-50%);
+}
+
+.paintings-container {
+	margin-top: 150px;
+}
+
+.first-gallery {
+	margin-top: 50px;
+	.col-sm-4 {
+		height: 250px;
+		padding: 0 30px;
+		margin-bottom: 60px;
+	}
+}
+
+.first-gallery__item {
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	position: relative;
+	cursor: pointer;
+	transition: all $animation 0.6s;
+	border-radius: 4px;
+	svg {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		width: 70px;
+		opacity: 0;
+		z-index: 20;
+		transition: all $animation 0.6s;
+	}
+	&:after {
+		content: '';
+		display: block;
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		background-color: black;
+		opacity: 0;
+		pointer-events: none;
+		z-index: 2;
+		transition: all $animation 0.6s;
+	}
+	&:hover {
+		svg {
+			opacity: 1;
+			transform: translate(-50%, -50%) scale(1.2);
+		}
+		&:after {
+			opacity: 0.4;
+		}
+		// transform: scale(1.05);
+	}
+}
+
+.third-gallery-title {
+	margin-top: 150px;
+}
+
+.wine-labels-gallery__item {
+	width: 25%;
+	height: 100%;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	cursor: pointer;
+	transition: all $animation 0.6s;
+	outline: none;
+	padding: 0 30px;
+	margin-bottom: 60px;
+	border-radius: 4px;
+}
+
+.wine-labels-gallery {
+	height: auto;
+	width: 100%;
+	outline: none;
+	margin-top: 50px;
+	overflow: hidden;
+}
+
+.second-gallery {
+	width: 100%;
+}
+
+.second-gallery__slide-size {
+	width: 20%;
+}
+
+.second-gallery__item {
+	width: 100%;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	height: 100%;
+	padding-bottom: 210%;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	transition: all $animation 0.6s;
+}
+
+.second-gallery-title {
+	margin-top: 150px;
+}
+
+.second-gallery {
+	margin-top: 50px;
+	.col-sm-3 {
+		padding: 0 30px;
+		margin-bottom: 60px;
+	}
+}
+
+.second-gallery__item {
+	box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.36);
+	border-radius: 4px;
+}
+
+.second-gallery .row .slider {
+	height: 100%;
+	width: 100%;
+	outline: none;
+	overflow: hidden;
+}
+
+// Mobile
+@media (max-width: 576px) {
+	div[data-router-view='the_gallery'] #scrollbar main {
+		padding-top: 45px;
+	}
+
+	.c-hero-the-gallery {
+		height: 50vh;
+		padding-top: 0;
+	}
+
+	.c-hero-the-gallery__title {
+		font-size: 35px;
+	}
+
+	.paintings-container {
+		margin-top: 50px;
+	}
+
+	.first-gallery {
+		margin-top: 0px;
+	}
+
+	.first-gallery .col-sm-4 {
+		height: 50vh;
+		padding: 0 15px;
+		margin-bottom: 25px;
+	}
+
+	.second-gallery-title {
+		margin-top: 50px;
+	}
+
+	.second-gallery {
+		margin-top: 0;
+	}
+	.second-gallery__slide-size {
+		width: 60%;
+	}
+	.second-gallery .col-sm-3 {
+		padding: 0 15px;
+		margin-bottom: 20px;
+	}
+
+	.third-gallery-title {
+		margin-top: 50px;
+	}
+
+	.container-form {
+		margin-top: 0px;
+		margin-bottom: 50px;
+	}
+}
+
+// Page transitions
+.c-hero-the-gallery {
+	opacity: 0;
+}
+
+.c-hero-the-gallery__title {
+	transform: translateX(-50%) translateY(-20%);
+	// opacity: 1;
+}

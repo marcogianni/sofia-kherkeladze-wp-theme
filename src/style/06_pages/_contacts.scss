@@ -1,0 +1,156 @@
+div[data-router-view='contacts_page'] main {
+	padding-top: 100px;
+	@media (max-width: 576px) {
+		padding-top: 50px;
+	}
+}
+#map {
+	position: relative;
+	overflow: hidden;
+	height: 70vh;
+	// background-color: $gray;
+	position: relative;
+	.container {
+		position: absolute;
+	}
+	div[title='SK'] {
+		img {
+			width: 30px !important;
+		}
+	}
+}
+
+.info-map {
+	position: relative;
+	margin-top: -65px;
+	background-color: $black;
+	padding: 50px 30px;
+	.row {
+		padding: 0px 35px;
+		align-content: center;
+		justify-content: space-around;
+		.block:last-child {
+			@media (max-width: 576px) {
+				margin-bottom: 0;
+			}
+		}
+		.block {
+			display: flex;
+			align-content: center;
+			@media (max-width: 576px) {
+				display: block;
+				align-content: inherit;
+				text-align: center;
+				margin-bottom: 35px;
+			}
+			a {
+				display: flex;
+				align-items: center;
+				cursor: pointer;
+				text-decoration: none;
+				@media (max-width: 576px) {
+					display: block;
+					align-items: inherit;
+				}
+				&:hover {
+					svg {
+						transform: scale(1.2);
+					}
+				}
+				svg {
+					display: block;
+					margin-right: 20px;
+					width: 20px;
+					transition: all 0.35s $animation;
+					@media (max-width: 576px) {
+						margin: 0 auto;
+						display: block;
+						margin-bottom: 25px;
+					}
+				}
+				span {
+					color: white;
+					font-size: vwd(15);
+					letter-spacing: vwd(1);
+					font-weight: 500;
+				}
+			}
+		}
+	}
+}
+
+// Mobile
+@media (max-width: 576px) {
+	div[data-router-view='contacts'] main {
+		padding-top: 45px;
+	}
+	#map {
+		height: 50vh;
+	}
+	.info-map {
+		width: 100%;
+		margin-top: -30px;
+		padding: 15px 15px;
+		.row {
+			padding: 0px 20px;
+			display: block;
+			align-content: inherit;
+			justify-content: inherit;
+		}
+	}
+
+	.info-map .row .block a span {
+		font-size: 13px;
+	}
+	.info-map {
+		position: relative;
+		margin-top: -65px;
+		background-color: $black;
+		padding: 30px 30px;
+		.row {
+			.block:last-child {
+				margin-bottom: 0;
+			}
+			.block {
+				display: block;
+				align-content: inherit;
+				text-align: center;
+				margin-bottom: 30px;
+				a {
+					display: block;
+					align-items: inherit;
+					svg {
+						margin: 0 auto;
+						display: block;
+						margin-bottom: 15px;
+					}
+					span {
+						font-size: 12px;
+						letter-spacing: 1px;
+					}
+				}
+			}
+		}
+	}
+}
+
+// Page transitions
+
+.info-map {
+	opacity: 0;
+	transform: translateY(50px);
+}
+
+#map {
+	&:after {
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		background-color: white;
+		display: block;
+		transform: translateY(0%);
+	}
+}

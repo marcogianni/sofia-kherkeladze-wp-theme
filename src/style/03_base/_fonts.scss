@@ -1,0 +1,80 @@
+// @font-face {
+//   font-family: 'Font';
+//   font-weight: 400;
+//   font-style: normal;
+//   font-display: swap;
+//   src: url('../../fonts/font.woff2') format('woff2'),
+//       url('../../fonts/font.woff') format('woff');
+// }
+
+@font-face {
+	font-family: 'MynaruseFlare-Hea';
+	src: url('../../fonts/MynaruseFlare-Hea.woff2') format('woff2'),
+		url('../../fonts/MynaruseFlare-Hea.woff') format('woff');
+	font-weight: 900;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'MynaruseFlare-Lig';
+	src: url('../../') format('woff2'),
+		url('../../fonts/MynaruseFlare-Lig.woff') format('woff');
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'MynaruseFlare-Thi';
+	src: url('../../fonts/MynaruseFlare-Thi.woff2') format('woff2'),
+		url('../../fonts/MynaruseFlare-Thi.woff') format('woff');
+	font-weight: 100;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'MynaruseFlare-Boo';
+	src: url('../../fonts/MynaruseFlare-Boo.woff2') format('woff2'),
+		url('../../fonts/MynaruseFlare-Boo.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'MynaruseFlare-Reg';
+	src: url('../../fonts/MynaruseFlare-Reg.woff2') format('woff2'),
+		url('../../fonts/MynaruseFlare-Reg.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'MynaruseFlare-Med';
+	src: url('../../fonts/MynaruseFlare-Med.woff2') format('woff2'),
+		url('../../fonts/MynaruseFlare-Med.woff') format('woff');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'MynaruseFlare-Bla';
+	src: url('../../fonts/MynaruseFlare-Bla.woff2') format('woff2'),
+		url('../../fonts/MynaruseFlare-Bla.woff') format('woff');
+	font-weight: 900;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'MynaruseFlare-Bol';
+	src: url('../../fonts/MynaruseFlare-Bol.woff2') format('woff2'),
+		url('../../fonts/MynaruseFlare-Bol.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}

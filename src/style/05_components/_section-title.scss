@@ -1,0 +1,43 @@
+.c-section-title__slash {
+	font-size: vwd(18);
+	color: $black;
+	font-weight: 700;
+}
+
+.c-section-title__num {
+	font-size: vwd(18);
+	margin-left: 25px;
+	color: $black;
+	font-weight: 700;
+}
+
+.c-section-title__title {
+	font-size: vwd(18);
+	letter-spacing: vwd(1.5);
+	display: inline;
+	margin-left: 50px;
+	color: $yellow;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+
+// Mobile
+@media (max-width: 576px) {
+	.c-section-title {
+		margin-bottom: 25px;
+	}
+	.c-section-title__slash {
+		font-size: 15px;
+	}
+
+	.c-section-title__num {
+		font-size: 14px;
+		margin-left: 10px;
+	}
+
+	.c-section-title__title {
+		font-size: 15px;
+		letter-spacing: vwd(1.5);
+		margin-left: 10px;
+	}
+}

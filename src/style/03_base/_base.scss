@@ -1,0 +1,15 @@
+body {
+	font-family: $font-main;
+	-webkit-tap-highlight-color: transparent;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+[data-router-wrapper] {
+	background: white;
+}
+
+.iubenda-ibadge {
+	display: inline-block;
+	margin-bottom: -7px;
+}

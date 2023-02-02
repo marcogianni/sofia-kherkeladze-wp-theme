@@ -1,0 +1,114 @@
+.gallery-slider-container {
+	position: fixed;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	background-color: $black;
+	width: 100vw;
+	height: 100vh;
+	z-index: 20000;
+	transition: all $animation 0.8s;
+	opacity: 1;
+}
+
+.gallery-slider-container-invisible {
+	opacity: 0;
+	pointer-events: none;
+}
+
+.close-gallery-slider {
+	position: absolute;
+	right: 0;
+	top: 5px;
+	padding: 20px;
+	z-index: 2200;
+	cursor: pointer;
+	svg {
+		width: 20px;
+	}
+}
+
+.gallery-slider {
+	height: 100%;
+	width: 100%;
+	outline: none;
+	position: relative;
+}
+.gallery-slider__item {
+	height: 100vh;
+	width: 100vw;
+	outline: none;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	img {
+		height: 85%;
+		display: block;
+		width: auto;
+	}
+}
+
+.flickity-button {
+	position: absolute;
+	top: calc(50% - 30px / 2);
+	z-index: 2500;
+	background: none;
+	border: none;
+	outline: none;
+	appearance: none;
+	cursor: pointer;
+	svg {
+		width: 30px;
+		fill: white;
+	}
+}
+
+.flickity-button[disabled] {
+	svg {
+		opacity: 0.4;
+	}
+}
+
+.flickity-button.previous {
+	left: 20px;
+}
+
+.flickity-button.next {
+	right: 20px;
+}
+
+// Mobile
+@media (max-width: 576px) {
+	.close-gallery-slider {
+		top: 5px;
+		padding: 8px;
+		right: 5px;
+	}
+
+	.close-gallery-slider svg {
+		width: 15px;
+	}
+
+	.flickity-button.next {
+		right: 9px;
+	}
+
+	.flickity-button.previous {
+		left: 9px;
+	}
+	.flickity-button svg {
+		width: 15px;
+	}
+
+	.flickity-button {
+		top: calc(50% - 15px / 2);
+	}
+
+	.gallery-slider__item img {
+		height: auto;
+		display: block;
+		width: 75%;
+	}
+}

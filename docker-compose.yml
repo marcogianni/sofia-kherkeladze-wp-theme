@@ -1,0 +1,49 @@
+version: '3.7'
+
+services:
+    mysql:
+        build:
+            context: .
+            dockerfile: ./docker/mysql.dockerfile
+        ports: [3306:3306]
+        restart: always
+        environment:
+            MYSQL_ROOT_PASSWORD: root
+            MYSQL_DATABASE: wordpress
+            MYSQL_USER: wordpress
+            MYSQL_PASSWORD: wordpress
+    node:
+        build:
+            context: .
+            dockerfile: ./docker/node.dockerfile
+        command: bash -c 'yarn install && npm run start'
+        volumes: [.:/theme]
+        restart: always
+    phpmyadmin:
+        depends_on: [mysql]
+        build:
+            context: .
+            dockerfile: ./docker/phpmyadmin.dockerfile
+        ports: [3001:80]
+        restart: always
+        environment:
+            PMA_HOST: mysql
+            MYSQL_ROOT_PASSWORD: root
+    wordpress:
+        depends_on: [mysql]
+        build:
+            context: .
+            dockerfile: ./docker/wordpress.dockerfile
+        ports: [3000:80, 443:443]
+        volumes:
+            [
+                .:/var/www/html/wp-content/themes/theme,
+                ./docker/wordpress/wp-content/uploads:/var/www/html/wp-content/uploads,
+                ./docker/wordpress/wp-content/plugins:/var/www/html/wp-content/plugins,
+            ]
+        restart: always
+        environment:
+            WORDPRESS_DB_HOST: mysql:3306
+            WORDPRESS_DB_USER: wordpress
+            WORDPRESS_DB_PASSWORD: wordpress
+            WORDPRESS_DB_NAME: wordpress
